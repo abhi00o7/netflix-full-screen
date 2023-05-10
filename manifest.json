@@ -1,0 +1,11 @@
+{
+  "name": "Netflix Aspect Ratio Changer",
+  "version": "1.0.0",
+  "description": "change aspect ratio of a Netflix video",
+  "manifest_version": 3,
+  "author": "Abhishek Kumar",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "full screen Netflix"
+  }
+}
