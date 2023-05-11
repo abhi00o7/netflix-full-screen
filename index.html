@@ -1,9 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Netflix Aspect Ratio</title>
-    <meta charset="utf-8">
-</head>
-<body>
-</body>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <!-- select box to select different options and change the aspect ratio -->
+    <select id="aspectRatio">
+      <option value="1.78">16:9</option>
+      <option value="1.33">4:3</option>
+      <option value="1.85">Cinemascope</option>
+      <option value="2.39">Anamorphic</option>
+    </select>
+
+    <!-- video element -->
+    <video
+      id="video"
+      src="http://techslides.com/demos/sample-videos/small.mp4"
+      controls
+    ></video>
+
+    <!-- script to change the aspect ratio -->
+    <script>
+      // get the video element
+      var video = document.getElementById("video");
+
+      // get the aspect ratio select box
+      var aspectRatio = document.getElementById("aspectRatio");
+
+      // add event listener to the select box
+      aspectRatio.addEventListener("change", function () {
+        // get the selected value
+        var value = aspectRatio.value;
+
+        // set the aspect ratio
+        video.style.aspectRatio = value;
+      });
+    </script>
+
+    <!-- style to make the video element responsive -->
+    <style>
+      #video {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </body>
 </html>
