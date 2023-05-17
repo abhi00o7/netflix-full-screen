@@ -14,11 +14,8 @@
     </select>
 
     <!-- video element -->
-    <video
-      id="video"
-      src="http://techslides.com/demos/sample-videos/small.mp4"
-      controls
-    ></video>
+    <video id="video" controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
 
     <!-- script to change the aspect ratio -->
     <script>
@@ -28,12 +25,10 @@
       // get the aspect ratio select box
       var aspectRatio = document.getElementById("aspectRatio");
 
-      // add event listener to the select box
       aspectRatio.addEventListener("change", function () {
         // get the selected value
         var value = aspectRatio.value;
 
-        // set the aspect ratio
         video.style.aspectRatio = value;
       });
     </script>
